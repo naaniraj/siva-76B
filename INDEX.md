@@ -14,7 +14,13 @@
 --> ANSIBLE setup <br>
 --> Modules,<br>
 --> Play-Books<br>
+--> Inventary File <br>
 
 ### DAY-19
 _________________
---> Inventary File <br>
+--> Variables in ansible <br>
+
+### DAY-20
+_____________
+
+
