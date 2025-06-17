@@ -47,6 +47,36 @@ go to bash
  for push the file into github 
 
 $git status   -->
+
+
+### write first shall 
+***********************
+--> create a folder in github --> **Repo-Nme:**Shall-Scrept
+-->^* Public --> **CREATE REPOSITORY**
+
+--> go to git-bash --> 
+
+    pws
+    /c/devops/daws-76s/repops
+    git clone (copy and paste the url of "shall-Scrept" repo)
+    ls -l  ( you can see the "Shall-Scrept" file
+    cd Shall-Scrept/ ( go inside the "Shall-Scrept" folder )
+    git branch -m master ( we move to the masterbranch )
+( the repo will come to your local then you can write the shall code inside of it,
+we can our file in the "Shall-Scrept"repo )
+( we create the files by sing "VS-CODE" the shall-scrept )
+
+### VS-CODE-Editer
+*********************
+create a folder in File-EXPO -->DevOps /76-S/ repos
+--> go to VS-Code -->select folder --> create a file --> and write the code 
+
+
+
+   
+
+
+  
     
    
    
