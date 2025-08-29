@@ -4,17 +4,18 @@
 
 #### Main Topics in TERRAFOM 
 ***************************
-📌 variable's
-📌 Condition's
-📌 Loop's
-📌 Function's
-📌 Data Source's
-📌 Out Put's 
-📌 Local's 
-📌 Count's 
-📌 Dynamic
+📌 variable's <br>
+📌 Condition's<br>
+📌 Loop's<br>
+📌 Function's<br>
+📌 Data Source's<br>
+📌 Out Put's <br>
+📌 Local's <br>
+📌 Count's <br>
+📌 Dynamic<br>
 
 ↪️ Create Multiple Environment in Terrafom 
-📌 rfvars 
-📌 work spaces
-📌 diff repos 
+
+📌 rfvars <br>
+📌 work spaces <br>
+📌 diff repos <br>
