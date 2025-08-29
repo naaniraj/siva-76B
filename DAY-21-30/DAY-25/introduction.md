@@ -1,4 +1,6 @@
-
+### what is Terrafom  ??
+↪️
+Terrafom is [ IAF ] infrastructure as a code tool, by using this tool we can create the infrastructure in automation  ,it's allow 's users to build change and version cloud and on-perm resources using providers
 
 
 
