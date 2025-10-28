@@ -108,7 +108,7 @@ in this location we have to run the terraform cammands
                      description = "Allow TLS inbound traffic and all outbound traffic"
                      vpc_id      = aws_vpc.main.id
 
-                     egress {
+                     ingress {
                         Decription       = "allow all ports"
                         from_port        = 0 # 0 means all ports
                         to_port          = 0
