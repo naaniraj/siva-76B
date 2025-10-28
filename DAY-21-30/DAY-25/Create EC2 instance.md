@@ -130,8 +130,31 @@ in this location we have to run the terraform cammands
                    terraform plan
                    terraform apply
 - now the resoucees will create  
-                 
-                 
-                
-  
 
+                 terraform distroy
+- to delete the resource
+  
+### 📂 write variables.tf file
+
+        variables "sg_name" {
+          type = string
+          default = "roboshop-all-aws"
+        }
+        variables "sg_discription" {
+          type = string
+          default = "allow LTS inbound traffic"
+        }
+        variables "inbound_from_port" {
+          #type = string
+          default = "0"
+        }
+        variables "cide_blocks" {
+          type = list
+          default = ["0.0.0.0/0"]
+        }                 
+                
+* now run this cammands to create the existing resource in 3 file ( 📂providers.tf ,📂ec2.tf ,📂variable.tf )
+
+         terraform plan
+         terraform apply
+  - now the resouce will creatre as per the .tf files
