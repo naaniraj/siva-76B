@@ -104,7 +104,7 @@ in this location we have to run the terraform cammands
                  }
 
                  resource "aws_security_group" "roboshop-all" { # this is terraform name for terraform reffernce 
-                     name        = "roboshop-all" # this is for aws
+                     name        = "var.sg-name" # this is for aws
                      description = "Allow TLS inbound traffic and all outbound traffic"
                      vpc_id      = aws_vpc.main.id
 
