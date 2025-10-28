@@ -110,7 +110,7 @@ in this location we have to run the terraform cammands
 
                      ingress {
                         Decription       = "allow all ports"
-                        from_port        = 0 # 0 means all ports
+                        from_port        = var.inbound_from_port # 0 means all ports
                         to_port          = 0
                         protocol         = "tcp"
                         cidr_blocks      = ["0.0.0.0/0"]
