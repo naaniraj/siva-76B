@@ -6,5 +6,9 @@
         }
         variables "sg_discription" {
           type = string
-          default = "roboshop-all-aws"
+          default = "allow LTS inbound traffic"
+        }
+        variables "inbound_from_port" {
+          #type = string
+          default = "0"
         }
