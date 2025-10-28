@@ -12,3 +12,7 @@
           #type = string
           default = "0"
         }
+        variables "cide_blocks" {
+          type = list
+          default = ["0.0.0.0/0"]
+        }
