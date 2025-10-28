@@ -51,14 +51,48 @@ go to VS code --> Crete folder
 
                   resource "aws_instance" "example" {
                     ami           = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-                    instance_type = "t3.micro"
+                    instance_type = "t2.micro"
 
                     tags = {
-                    Name = "HelloWorld"
+                    Name = "HelloTerraform"
                     }
                  }
 
+### run the Terraform Cammands
+- whare ever .tf file's are exits thare only we have to run the cammands
+- we have to go whare the files and run the cammmands inside the directry
 
+          ls
+          cd sessions-1/
+          ls
+          cd ec2/
+          cd ls  # Here you can see the .tf files ,here only we have to run the terraform cammands
 
+in this location we have to run the terraform cammands 
+
+            terraform init
+- this cammand will initilize the providers
+- it will Download the AWS plugins
+- terraform will cannact to aws it will download the providers
+- it will create terraform folder
+
+             terraform plan
+- it will display what we gonna create the resource
+- it give full indetail informatin of  the  resource
+- it's give a plan before we gonna create the resource
+
+         terraform apply
+- when we conform the resources are fine to create
+- the we use this cammand to create the resouce
+- it will create what ever we writre in .tf file
+- now check in your AWS a/c
+- our resouce will created by terraform automation
+
+          terraform distroy
+- this cammand will erise all the resource we created
+     
+
+          
+          
   
 
