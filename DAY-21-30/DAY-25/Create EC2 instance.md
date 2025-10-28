@@ -90,9 +90,48 @@ in this location we have to run the terraform cammands
 
           terraform distroy
 - this cammand will erise all the resource we created
-     
 
-          
-          
+#### Add security group to EC2 
+
+               resource "aws_instance" "example" {
+                    ami           = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
+                    instance_type = "t2.micro"
+                    vpc_security_group_ids = ["aws_security_group"."roboshop-all".id] #this is means list
+
+                    tags = {
+                      Name = "HelloTerraform"
+                    }
+                 }
+
+                 resource "aws_security_group" "roboshop-all" { # this is terraform name for terraform reffernce 
+                     name        = "roboshop-all" # this is for aws
+                     description = "Allow TLS inbound traffic and all outbound traffic"
+                     vpc_id      = aws_vpc.main.id
+
+                     egress {
+                        Decription       = "allow all ports"
+                        from_port        = 0 # 0 means all ports
+                        to_port          = 0
+                        protocol         = "tcp"
+                        cidr_blocks      = ["0.0.0.0/0"]
+                        ipv6_cidr_blocks = ["::/0"]
+                    }
+                    egress {
+                       from_port        = 0
+                       to_port          = 0
+                       protocol         = "-1"
+                       cidr_blocks      = ["0.0.0.0/0"]
+                       #ipv6_cidr_blocks = ["::/0"]
+                  }
+                 }
+- run this cammands to create the above resources
+
+                  
+                   terraform plan
+                   terraform apply
+- now the resoucees will create  
+                 
+                 
+                
   
 
