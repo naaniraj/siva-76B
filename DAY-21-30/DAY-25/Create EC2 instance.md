@@ -113,7 +113,7 @@ in this location we have to run the terraform cammands
                         from_port        = var.inbound_from_port # 0 means all ports
                         to_port          = 0
                         protocol         = "tcp"
-                        cidr_blocks      = ["0.0.0.0/0"]
+                        cidr_blocks      = "vir.cide_blocks"
                         ipv6_cidr_blocks = ["::/0"]
                     }
                     egress {
