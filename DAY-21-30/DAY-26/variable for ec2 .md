@@ -4,7 +4,7 @@
           resource "aws_instence" "web" {
             ami = var.ami_id
             instence type = var.instence_type
-            #vpc_security_group_ids = [aws_security_group.roboshop-id] #this is means list
+            vpc_security_group_ids = [aws_security_group.roboshop-id] #this is means list
             tags = var.tags
 
         }
@@ -35,10 +35,12 @@
                type = string
                default = "roboshop-all"
             }
+  
             variable "sg-description" {
               type = string
               default = "allowing all ports"
             }
+  
             variable "sg-description" {
               type = string
               default = "allowing all ports"
@@ -53,10 +55,7 @@
               type = list
               default = ["0.0.0.0/0"]
            }
-- run the cammands ro create t2.micro with "ami-03265a0778a880afb" resouce with the tag of "Hello Terraform"
 
-              terraform plan
-              terraform apply
 
 * sg.tf 📝
 
@@ -87,7 +86,10 @@
          }   
 
 
+- run the cammands ro create t2.micro with "ami-03265a0778a880afb" resouce with the tag of "Hello Terraform"
 
+              terraform plan
+              terraform apply
   
 
 
