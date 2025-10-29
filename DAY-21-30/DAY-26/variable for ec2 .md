@@ -31,11 +31,28 @@
                 Terraform = "true"
               }
             }
+             variable "sg-name" {
+               type = string
+               default = "roboshop-all"
+            }
+            variable "sg-description" {
+              type = string
+              default = "allowing all ports"
+            }
 
-variable "sg-name" {
-  type = string
-  default = "roboshop-all"
-}
+- run the cammands ro create t2.micro with "ami-03265a0778a880afb" resouce with the tag of "Hello Terraform"
+
+              terraform plan
+              terraform apply
+
+* sg.tf 📝
+
+           
+
+
+
+  
+
 
 variable "sg-description" {
   type = string
