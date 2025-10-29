@@ -1,5 +1,15 @@
 #### Write variable for ec2
-*
+* ec2.tf 📝
+
+          resource "aws_instence" "web" {
+            ami = var.ami_id
+            instence type = var.instence_type
+            #vpc_security_group_ids = [aws_security_group.roboshop-id] #this is means list
+            tags = var.tags
+
+        }
+
+* variable.tf 📝
 
             variable "ami_id" {
               type = string
