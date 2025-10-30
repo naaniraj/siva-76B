@@ -86,6 +86,19 @@
          }   
 
 
+* terraform.tfvars 📝
+
+          instence_type = "t2.medium"
+
+
+
+- if you run instend of " t2.micro  " terraform will create " t2.medium"
+- like this we can change our resource without mention in inside the file
+- by using this cammand first preference will come to cammand CLI
+- terraform will take "terraform.tfvars 📝 " automatically
+
+       " terraform plan -var=instence_type = "t2.medium "           
+
 - run the cammands ro create t2.micro with "ami-03265a0778a880afb" resouce with the tag of "Hello Terraform"
 
               terraform plan
