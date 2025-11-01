@@ -98,7 +98,16 @@
 - terraform will take "terraform.tfvars 📝 " automatically
 
        " terraform plan -var=instence_type = "t2.medium "           
+- also we can change the instence by using windows CMD-PROMPT
 
+         cd ..
+         cd ..
+         devops/daws-76s/repos/terraform>set TF_VAR_instence_type=t3.large
+         cd variable
+         terraform plan
+         terraform apply 
+         
+         
 - run the cammands ro create t2.micro with "ami-03265a0778a880afb" resouce with the tag of "Hello Terraform"
 
               terraform plan
