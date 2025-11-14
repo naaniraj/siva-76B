@@ -33,12 +33,31 @@
 
             resource "aws_instance" "example" {
                 ami           = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-                instance_type = "t2.micro"
+                instance_type = var.instence_name =="mangoDB" ? "t2.micro" : "t3.small"
                 vpc_security_group_ids = ["aws_security_group"."roboshop-all".id] #this is means list
 
                 tags = {
                   Name = "HelloTerraform"
                 }
              }
+* 📝 Variables.tf
 
+           variable "instence_name" {
+             type = string
+             default = "mangoDB"
+           }
+            
+           variable "ami_id" {
+             type = string
+
+
+  --> go CMD
+
+         ls
+         cd .. /conditions/
+         terraform init
+         terraform plan
+         terraform apply
+         
+               
 
