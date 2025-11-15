@@ -50,6 +50,18 @@
            variable "ami_id" {
              type = string
 
+* 📝 count.tf
+
+          resource "aws_instence" "web" {
+            count = 11 # when you give any number terraform will create 11 instnce ,insted of writting 11 times
+                       # count.index is special variable to set a name to multi instence at a time
+            ami = var.ami_id
+            instence type = "t2.micro"
+            tags = {
+               name = "wen"
+            }
+          }
+          
 
   --> go CMD
 
@@ -58,6 +70,15 @@
          terraform init
          terraform plan
          terraform apply
-         
-               
-
+  
+   --> go CMD
+      
+              ls
+         cd .. /count/
+         terraform init
+         terraform plan
+         terraform apply -auto-approve
+  
+- in count when we write 11 number terraform well create 11 instence
+- with out writting 11 times the code
+- but all instence will have same name 
