@@ -58,10 +58,16 @@
             ami = var.ami_id
             instence type = "t2.micro"
             tags = {
-               name = "wen"
+               name = var.instence_name[count.index]     
             }
           }
-          
+          resource "aws_route53_record" "www" {
+            zone_id = aws_route53_zone.primary.zone_id
+            name    = "www.example.com"
+            type    = "A"
+            ttl     = 300
+            records = [aws_eip.lb.public_ip]
+        }
 
   --> go CMD
 
@@ -82,3 +88,5 @@
 - in count when we write 11 number terraform well create 11 instence
 - with out writting 11 times the code
 - but all instence will have same name 
+* "count.index"
+- by using count.index we can control the names of the instence
